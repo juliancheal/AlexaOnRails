@@ -1,4 +1,11 @@
-<p id="notice"><%= notice %></p>
+<b>Conferance Day</b> <%= @talk.conference_day %></br>
+<b>Start Time</b> <%= @talk.start_time.strftime("%H:%M:%S") %></br>
+<b>End Time</b> <%= @talk.end_time.strftime("%H:%M:%S") %></br>
+<b>Session ID</b> <%= @talk.program_session_id %></br>
+<b>Title</b> <%= @talk.title %></br>
+<b>Presenter</b> <%= @talk.presenter %></br>
+<b>Room</b> <%= @talk.room %></br>
+<b>Track</b> <%= @talk.track %></br>
+<b>Description</b> <%= @talk.description %></br>
 
-<%= link_to 'Edit', edit_talk_path(@talk) %> |
 <%= link_to 'Back', talks_path %>

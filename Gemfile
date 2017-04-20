@@ -27,7 +27,6 @@ gem 'pg'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development do
-  gem 'better_errors'
   gem 'hub', require: nil
   gem 'rails_layout'
 end
