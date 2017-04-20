@@ -45,3 +45,4 @@ bower.json
 .byebug_history
 
 log/development.log
+public/assets/*
