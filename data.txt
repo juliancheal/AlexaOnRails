@@ -1,0 +1,62 @@
+{
+  "intents": [
+    {
+      "slots": [
+        {
+          "name": "Date",
+          "type": "AMAZON.DATE"
+        },
+        {
+          "name": "Time",
+          "type": "AMAZON.TIME"
+        },
+        {
+          "name": "SpokenDate",
+          "type": "SPOKEN_DATE"
+        },
+        {
+          "name": "Talk",
+          "type": "TALK_TYPE"
+        },
+        {
+          "name": "Speaker",
+          "type": "LIST_OF_SPEAKERS"
+        },
+        {
+          "name": "Location",
+          "type": "LIST_OF_LOCATIONS"
+        }
+      ],
+      "intent": "RailsConfTalks"
+    }
+  ]
+}
+
+TALK_TYPE	keynote | talk | break_time
+LIST_OF_SPEAKERS	Aaron | DHH | Julian | Jonan
+SPOKEN_DATE	today | tomorrow | thursday
+LIST_OF_LOCATIONS	150 | 152 | 156 | 160 | 162 | 164 | Exhibit Hall | South Ballroom | South Ballroom Lobby | South Lobby
+
+RailsConfTalks Which room is {Date} {Talk}
+RailsConfTalks Who is speaking at {Time}​
+RailsConfTalks Which room is {Date}​ keynote
+RailsConfTalks Give details of {Person}​ talk
+RailsConfTalks Who is speaking at {Time}​ in {Location}​
+
+
+Which room is {Date} {Talk}
+  Which room is tomorrow keynote
+
+Which room is the {Talk} talk
+  Which room is the RaspberryPi talk
+
+Give details of {Person}​ talk
+  Give details of Aaron talk
+
+Who is speaking at {Time}​
+  who is speaking at 11:40 today
+
+Who is speaking at {Time}​ in {Location}​
+  who is speaking at 12:20 today in Exhibit Hall
+
+Sup! I'm Alexa, This is my first Rails conference. How you enjoying it? It's so hot here in Phoenix, you'd think I'd be used to that being from the Amazon. I love DHH, he writes the best codes and rants so well about shitty startups. I also really like Tender love, but I can beat his puns any day. Come at me bro! Just joking Tender love. Here is some advice. Don't give up on your dreams. Keep sleeping.

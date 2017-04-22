@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 ruby '2.3.3'
+
+gem 'alexa_generator', require: nil
+gem 'alexa_rubykit'
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
