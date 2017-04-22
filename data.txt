@@ -47,8 +47,8 @@ RailsConfTalks Who is speaking at {Time}​ in {Location}​
 Which room is {Date} {Talk}
   Which room is tomorrow keynote
 
-Which room is the {Talk} talk
-  Which room is the RaspberryPi talk
+Which room is {Talk}
+  Which room is Sorting Humans
 
 Give details of {Person}​ talk
   Give details of Aaron talk
