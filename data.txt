@@ -25,6 +25,10 @@
         {
           "name": "Location",
           "type": "LIST_OF_LOCATIONS"
+        },
+                {
+          "name": "Repo",
+          "type": "LIST_OF_REPOS"
         }
       ],
       "intent": "RailsConfTalks"
@@ -36,6 +40,7 @@ TALK_TYPE	keynote | talk | break_time
 LIST_OF_SPEAKERS	Aaron | DHH | Julian | Jonan
 SPOKEN_DATE	today | tomorrow | thursday
 LIST_OF_LOCATIONS	150 | 152 | 156 | 160 | 162 | 164 | Exhibit Hall | South Ballroom | South Ballroom Lobby | South Lobby
+LIST_OF_REPOS	rails/rails
 
 RailsConfTalks Which room is {Date} {Talk}
 RailsConfTalks Who is speaking at {Time}​
@@ -43,6 +48,11 @@ RailsConfTalks Which room is {Date}​ keynote
 RailsConfTalks Give details of {Person}​ talk
 RailsConfTalks Who is speaking at {Time}​ in {Location}​
 
+To give her {Talk}
+  To give her talk introduction
+
+Tell {LIST_OF_SPEAKERS} please rebase your PR
+  Tell Jonan please rebase your PR
 
 Which room is {Date} {Talk}
   Which room is tomorrow keynote
@@ -58,5 +68,8 @@ Who is speaking at {Time}​
 
 Who is speaking at {Time}​ in {Location}​
   who is speaking at 12:20 today in Exhibit Hall
+
+What is {Repo} build status
+  what is Rails build status
 
 Sup! I'm Alexa, This is my first Rails conference. How you enjoying it? It's so hot here in Phoenix, you'd think I'd be used to that being from the Amazon. I love DHH, he writes the best codes and rants so well about shitty startups. I also really like Tender love, but I can beat his puns any day. Come at me bro! Just joking Tender love. Here is some advice. Don't give up on your dreams. Keep sleeping.
