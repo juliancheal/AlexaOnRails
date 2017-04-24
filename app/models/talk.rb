@@ -1,8 +1,10 @@
 require "#{Rails.root}/lib/travis_api"
+require "#{Rails.root}/lib/post_to_chat"
 
 # It's all about the talks
 class Talk < ApplicationRecord
   def self.find_talk(foo) # rubocop:disable Metrics/MethodLength
+    @chat = PostToChat.new('http://friendsterbookspace-staging.herokuapp.com/')
     days_of_conf = {'2017-04-24' => '1', '2017-04-25' => '2', '2017-04-26' => '3',
                     'today' => '1', 'tomorrow' => '2', 'thursday' => '3'}
     puts "FOO: #{foo.inspect}"
@@ -71,10 +73,14 @@ class Talk < ApplicationRecord
 
   def self.generate_response(results, location=nil, person=nil, repo=nil, talk=nil, time=nil)
     if results.nil?
-      return "Sorry, couldn't understand the question. Please ask again"
+      response_string = "Sorry, couldn't understand the question. Please ask again"
+      @chat.post_message(response_string)
+      return response_string
     end
     if results.empty?
-      return "Sorry, couldn't find a thing. Let's try that again"
+      response_string = "Sorry, couldn't find a thing. Let's try that again"
+      @chat.post_message(response_string)
+      return response_string
     end
     response_string = ''
     if talk == 'Keynote'
@@ -112,6 +118,7 @@ class Talk < ApplicationRecord
       response_string =
         travis.build_status('rails/rails')
     end
+    @chat.post_message(response_string)
     response_string
   end
 end

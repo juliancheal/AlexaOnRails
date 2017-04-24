@@ -208,10 +208,12 @@ DEPENDENCIES
   bootstrap (~> 4.0.0.alpha3.1)
   byebug
   coffee-rails (~> 4.2)
+  faraday
   high_voltage
   hub
   jbuilder (~> 2.5)
   jquery-rails
+  json
   listen (~> 3.0.5)
   pg
   puma (~> 3.0)

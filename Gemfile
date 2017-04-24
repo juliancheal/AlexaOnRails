@@ -14,6 +14,9 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'travis', require: nil
 
+gem 'faraday'
+gem 'json'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
