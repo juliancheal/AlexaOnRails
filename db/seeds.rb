@@ -18,9 +18,9 @@
 #    Rails is out. Using nothing but your voice and ActionCable."
 # }
 
-require '../conf_schedule/parser'
+require "#{Rails.root}/db/parser"
 
-parser = Parser.new('../conf_schedule/railsconf2017-schedule-2017-04-20.json')
+parser = Parser.new("#{Rails.root}/db/railsconf2017-schedule-2017-04-20.json")
 
 # db fields ->
 # conference_day

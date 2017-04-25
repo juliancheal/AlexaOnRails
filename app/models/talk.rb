@@ -5,7 +5,7 @@ require "#{Rails.root}/lib/post_to_chat"
 class Talk < ApplicationRecord
   def self.find_talk(foo) # rubocop:disable Metrics/MethodLength
     @chat = PostToChat.new('https://friendsterbookspace.herokuapp.com/')
-    days_of_conf = {'2017-04-24' => '1', '2017-04-25' => '2', '2017-04-26' => '3',
+    days_of_conf = {'2017-04-25' => '1', '2017-04-26' => '2', '2017-04-27' => '3',
                     'today' => '1', 'tomorrow' => '2', 'thursday' => '3'}
     puts "FOO: #{foo.inspect}"
     date     = nil
